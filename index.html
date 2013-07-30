@@ -12,10 +12,11 @@
 </head>
 <body>
 	<script>
+	//This sets up moment as a thing we can use. Keep this. 
     	moment().format();
 	</script>
 	<script>
-		// Here be the seconds.  
+		// Here be the seconds and the Tom Tom URL request  
 		$.ajax({
 			
 			url:"https://api.tomtom.com/lbs/services/route/3/33.91859,-118.39372:33.85716,-118.30965/Quickest/jsonp?includeTraffic=true&time=now&trafficModelID=-1&includeInstructions=false&key=5zbbuuejq22suvrg4fjrg3fs&jsonp=?&callback=?",
@@ -45,11 +46,28 @@
 	</script>
 	
 	<div class="seconds"></div>
+	<!--the following is some crazy fittext scripting-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
  	<script src="js/jquery.fittext.js"></script>
 	<script type="text/javascript">
 		$('div.seconds').fitText();
 	</script>
-	
+
+	<script>
+	//HERE THERE BE THE AUTO REFRESH FUNCTION
+	 var time = new Date().getTime();
+     $(document.body).bind("mousemove keypress", function(e) {
+         time = new Date().getTime();
+     });
+
+     function refresh() {
+         if(new Date().getTime() - time >= 180000) 
+             window.location.reload(true);
+         else 
+             setTimeout(refresh, 10000);
+     }
+
+     setTimeout(refresh, 10000);
+	</script>
 </body>
 </html>
