@@ -1,0 +1,259 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+	height: 100%;
+	
+	background-color: rgb(255,106,0);
+}
+
+body {
+	text-align: center;
+	font-size: 16px;
+	font-family: "Lato", "Helvetica Neue", "Helvetica",san-serif;
+	font-smooth:always;
+	-webkit-font-smoothing: antialiased;
+	
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "ProximaNovaA-Bold";
+}
+p {
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.t1-icon {
+	padding-top: .5em;
+	margin: 0 auto;
+}
+
+.one .number, 
+.one .minutes {
+	color: rgb(255,106,0);
+}
+
+.two .number, 
+.two .minutes {
+	color: rgb(89,92,90);
+}
+
+.three .number, 
+.three .minutes {
+	color: rgb(0,0,0);
+}
+
+.time-card {
+	background-color: #fff;
+	
+	-moz-box-shadow: 0 0 1px 2px rgba(0,0,0,0.2);
+	-webkit-box-shadow:  0 0 1px 2px rgba(0,0,0,0.2);;
+	box-shadow:  0 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.number {
+	padding: 0;
+	font-weight: bold;
+	margin: 0 auto;
+	
+}
+
+.minutes {
+	font-family: "ProximaNovaA-SemiBold";
+	text-transform:uppercase;
+	letter-spacing: 5px;
+	margin: 0 auto;
+}
+
+.one .minutes {
+	border-top: 1px solid rgb(255,106,0);
+}
+.two .minutes {
+	border-top: 1px solid rgb(89,92,90);
+}
+.three .minutes {
+	border-top: 1px solid rgb(0,0,0);
+}
+
+.copy {
+	font-size: 1.7em;
+	font-weight: lighter;
+	color: #fff;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.secondary-block img {
+	max-width: 80px;
+}
+
+.cbp-fwslider {
+	position: relative;
+	margin: 0 0 10px;
+	overflow: hidden;
+	display: block;
+
+}
+
+.cbp-fwslider ul {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	list-style-type: none;
+
+}
+
+.cbp-fwslider ul li {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	transform: translateZ(0);
+	float: left;
+	display: block;
+	margin: 0;
+	padding: 0;
+	
+
+}
+
+
+.cbp-fwslider ul li > a,
+.cbp-fwslider ul li > div {
+	display: block;
+	text-align: center;
+	outline: none;
+}
+
+
+.cbp-fwslider nav span {
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	height: 100px;
+	background: rgba(255,255,255,0.6);
+	color: #fff;
+	font-weight: bold;
+	font-size: 50px;
+	text-align: center;
+	margin-top: -50px;
+	line-height: 100px;
+	cursor: pointer;
+	font-weight: normal;
+}
+
+.cbp-fwslider nav span:hover {
+	background: rgba(255,255,255,0.4);
+}
+
+.cbp-fwslider nav span.cbp-fwnext {
+	right: 0px;
+}
+
+.cbp-fwslider nav span.cbp-fwprev {
+	left: 0px;
+}
+
+.cbp-fwdots {
+	position: fixed;
+	bottom: 0px;
+	white-space: nowrap;
+	text-align: center;
+	width: 100%;
+}
+
+.cbp-fwdots span {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #fff;
+	margin: 4px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.cbp-fwdots span:hover {
+	background: rgba(255,255,255,0.7);
+}
+
+.cbp-fwdots span.cbp-fwcurrent {
+	background: #fff;
+	border: 1px solid #fff;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+	-webkit-transition: box-shadow 0.2s ease-in-out;
+	-moz-transition: box-shadow 0.2s ease-in-out;
+	transition: box-shadow 0.2s ease-in-out;
+	
+}
+.secondary-block {
+	display: block;
+}
+.secondary-block img {
+	margin: 0 auto;
+	width: inherit;
+	padding: 0;
+	vertical-align: middle;
+}
+
+@media (max-width:810px){
+	.time-card {
+		margin: 0 3em;
+		margin-top: .5em;
+	}
+	
+	.number {
+		font-size: 12em;
+		margin: 0 auto;
+		line-height: .8em;
+		padding-top: .07em;
+	}
+	.minutes {
+		font-size: 3em;
+		padding-top: .25em;
+		padding-bottom: .25em;
+	}
+	
+}
+
+@media (min-width:810px) {
+	
+	.time-card {
+	margin: 0 9em;
+	margin-top: 1em;
+	padding-bottom: 3em;
+	padding-top: 1em;	
+	padding-left: 4em;
+	padding-right: 4em;
+	
+	}
+	
+	.number {
+	font-size: 24em;
+	padding-top: 50px;
+	line-height: .8em;
+	}
+	
+	.minutes {
+		font-size: 5em;
+		letter-spacing: 10px;
+		padding-top: .3em;
+	}
+	
+	.copy {
+		font-size: 4em;
+	}
+	
+	.cbp-fwdots {
+	padding-bottom: 1em;
+	}
+	
+	.secondary-block img {
+		max-width: 100px;
+	}
+}
