@@ -34,6 +34,7 @@ p {
 .t1-icon {
 	padding-top: .5em;
 	margin: 0 auto;
+	
 }
 
 .one .number, 
@@ -71,7 +72,10 @@ p {
 	text-transform:uppercase;
 	letter-spacing: 5px;
 	margin: 0 auto;
-}
+	font-size: 2em;
+	padding-top: .15em;
+	padding-bottom: .15em;
+}	
 
 .one .minutes {
 	border-top: 1px solid rgb(255,106,0);
@@ -84,11 +88,15 @@ p {
 }
 
 .copy {
-	font-size: 1.7em;
-	font-weight: lighter;
+	font-size: 1em;
+	font-weight: normal;
 	color: #fff;
 	margin: 0 auto;
 	max-width: 100%;
+}
+
+.copy em {
+	font-size: 150%;
 }
 
 .secondary-block img {
@@ -213,11 +221,15 @@ p {
 		line-height: .8em;
 		padding-top: .07em;
 	}
-	.minutes {
-		font-size: 3em;
-		padding-top: .25em;
-		padding-bottom: .25em;
+	
+	.t1-icon {
+		width: 2em;
 	}
+	.slide-icon {
+		width: 3em;
+		margin: 0 auto;
+	}
+
 	
 }
 
