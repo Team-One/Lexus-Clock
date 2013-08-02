@@ -1,3 +1,6 @@
+/* CSS */
+
+
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 
 *,
@@ -9,7 +12,6 @@
 
 html, body {
 	height: 100%;
-	
 	background-color: rgb(255,106,0);
 }
 
@@ -25,17 +27,22 @@ body {
 h1,h2,h3,h4,h5,h6 {
 	font-family: "ProximaNovaA-Bold";
 }
+
 p {
 	display: block;
 	padding: 0;
 	margin: 0 auto;
 }
 
+/* T1 icon */
+
 .t1-icon {
-	padding-top: .5em;
+	padding-top: .25em;
 	margin: 0 auto;
 	
 }
+
+/* Slide Colors */
 
 .one .number, 
 .one .minutes {
@@ -52,6 +59,8 @@ p {
 	color: rgb(0,0,0);
 }
 
+/* Time Card Component */
+
 .time-card {
 	background-color: #fff;
 	
@@ -61,6 +70,9 @@ p {
 }
 
 .number {
+	font-size: 10em;
+	margin: 0 auto;
+
 	padding: 0;
 	font-weight: bold;
 	margin: 0 auto;
@@ -87,6 +99,21 @@ p {
 	border-top: 1px solid rgb(0,0,0);
 }
 
+
+
+/* "Estimated Time" Component */
+
+
+.secondary-block {
+	display: block;
+}
+
+.secondary-block img {
+	margin: 0 auto;
+	padding: .3em 0;
+	max-width: 3em;
+}
+
 .copy {
 	font-size: 1em;
 	font-weight: normal;
@@ -99,11 +126,12 @@ p {
 	font-size: 150%;
 }
 
-.secondary-block img {
-	max-width: 80px;
-}
+
+
+/* SLIDER */
 
 .cbp-fwslider {
+	height: 100%
 	position: relative;
 	margin: 0 0 10px;
 	overflow: hidden;
@@ -199,15 +227,7 @@ p {
 	transition: box-shadow 0.2s ease-in-out;
 	
 }
-.secondary-block {
-	display: block;
-}
-.secondary-block img {
-	margin: 0 auto;
-	width: inherit;
-	padding: 0;
-	vertical-align: middle;
-}
+
 
 @media (max-width:810px){
 	.time-card {
@@ -216,8 +236,6 @@ p {
 	}
 	
 	.number {
-		font-size: 12em;
-		margin: 0 auto;
 		line-height: .8em;
 		padding-top: .07em;
 	}
@@ -225,9 +243,16 @@ p {
 	.t1-icon {
 		width: 2em;
 	}
-	.slide-icon {
-		width: 3em;
-		margin: 0 auto;
+	
+	.cbp-fwdots {
+	position: fixed;
+	bottom: 0;
+	padding-bottom: .25em;
+
+}
+	.cbp-fwdots span {
+		height: 10px;
+		width: 10px;
 	}
 
 	
