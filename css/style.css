@@ -12,7 +12,7 @@
 
 html, body {
 	height: 100%;
-	background-color: rgb(255,106,0);
+	background-color: #FF6A00;
 }
 
 body {
@@ -34,14 +34,14 @@ p {
 	margin: 0 auto;
 }
 
-/* T1 icon */
+/* T1 icon 
 
 .t1-icon {
 	padding-top: .25em;
 	margin: 0 auto;
 	
 }
-
+*/
 /* Slide Colors */
 
 .one .number, 

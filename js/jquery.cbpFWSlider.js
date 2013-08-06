@@ -14,12 +14,16 @@
 
 	// global
 	var Modernizr = window.Modernizr;
-
+	var instance_ref = window.instance_ref;
 	$.CBPFWSlider = function( options, element ) {
 		this.$el = $( element );
 		this._init( options );
+		
+	
 	};
-
+	
+	
+	
 	// the options
 	$.CBPFWSlider.defaults = {
 		// default transition speed (ms)
@@ -29,6 +33,7 @@
 	};
 
 	$.CBPFWSlider.prototype = {
+		
 		_init : function( options ) {
 			// options
 			this.options = $.extend( true, {}, $.CBPFWSlider.defaults, options );
@@ -79,6 +84,7 @@
 			// apply the transition
 			if( this.support ) {
 				this.$list.css( 'transition', this.transformName + ' ' + this.options.speed + 'ms ' + this.options.easing );
+				
 			}
 			// each item will have a width of 100 / itemsCount
 			this.$items.css( 'width', 100 / this.itemsCount + '%' );
@@ -124,11 +130,23 @@
 			this.old = this.current;
 			if( direction === 'next' && this.current < this.itemsCount - 1 ) {
 				++this.current;
+								
 			}
 			else if( direction === 'previous' && this.current > 0 ) {
 				--this.current;
 			}
-			// slide
+			console.log(this.current);
+			if(this.current == 0)
+			{
+				$('body').css('background', '#FF6A00');
+			}else if(this.current == 1)
+			{
+				$('body').css('background', '#595C5A)');
+			}else if(this.current == 2)
+			{
+				$('body').css('background', '#000000');
+			}
+			// slide																						//AROUND HERE?
 			this._slide();
 
 		},
@@ -151,6 +169,7 @@
 
 			if( this.support ) {
 				this.$list.on( this.transEndEventName, $.proxy( transitionendfn, this ) );
+				
 			}
 			else {
 				transitionendfn.call();
@@ -204,8 +223,11 @@
 			window.console.error( message );
 		}
 	};
+	
 
 	$.fn.cbpFWSlider = function( options ) {
+		
+	
 		if ( typeof options === 'string' ) {
 			var args = Array.prototype.slice.call( arguments, 1 );
 			this.each(function() {
@@ -221,6 +243,9 @@
 				}
 				instance[ options ].apply( instance, args );
 			});
+			
+			$.instance_ref = instance;
+			
 		} 
 		else {
 			this.each(function() {	
@@ -232,8 +257,10 @@
 					instance = $.data( this, 'cbpFWSlider', new $.CBPFWSlider( options, this ) );
 				}
 			});
+			
+				$.instance_ref = instance;	
 		}
-		return this;
+		
 	};
 
 } )( jQuery, window );

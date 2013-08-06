@@ -19,10 +19,10 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	
 <!-- icon links --> 
-	<link rel="apple-touch-icon" href="../images/touch-icon-iphone.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="../images/touch-icon-ipad.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="../images/touch-icon-iphone4.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="../images/touch-icon-ipad2.png">
+	<link rel="apple-touch-icon" href="img/iPhone.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/iPad.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/iPhone@2x.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/iPad@2x.png">
 	
 	<link rel="stylesheet" href="css/add2home.css">
 	<script type="text/javascript" src="js/add2home.js" charset="utf-8"></script>
@@ -51,11 +51,10 @@
 
 
 <!-- T1 ICON -->
-<img class="t1-icon" src="img/t1-icon.png"/>
-
 <!-- SLIDER CONTENT -->
 
 <div id="cbp-fwslider" class="cbp-fwslider">
+<img class="t1-icon" src="img/t1-icon.png"/>
 				<ul>
 				
 				<!-- SLIDE 1 -->
@@ -66,10 +65,10 @@
 						</div>
 						<div class="secondary-block">
 							<div><img src="img/lex-icon.png"/></div>
-							<p class="copy">
+							<p class="copy" id="1">
 								Estimated driving time to: 
 								<br/>
-								<em><strong>Lexus HQ</strong></em>
+								<span class="lexus"><em><strong>Lexus HQ</strong></em></span>
 							</p>
 						</div>
 					</li>
@@ -81,10 +80,10 @@
 						</div>
 						<div class="secondary-block">
 							<img src="img/plane-icon.png"/>
-							<p class="copy">
+							<p class="copy" id"2">
 								Estimated driving time to: 
 								<br/>
-								<em><strong>LAX</strong></em>
+								<span class="lax"><em><strong>LAX</strong></em></span></span>
 								</p>
 						</div>
 					</li>
@@ -96,10 +95,10 @@
 						</div>
 						<div class="secondary-block">
 							<div><img src="img/beach-icon.png"/></div>
-							<p class="copy">
+							<p class="copy" id="3">
 								Estimated driving time to: 
 								<br/>
-								<em><strong>The Beach</strong></em>
+								<span class="beach"><em><strong>The Beach</strong></em></span>
 								</p>
 						</div>
 					</li>
@@ -110,10 +109,10 @@
 		
 		        
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-		<script src="js/jquery.cbpFWSlider.min.js"></script>
+		<script src="js/jquery.cbpFWSlider.js"></script>
 		<script>
 			$( function() {
 				/*
@@ -129,9 +128,13 @@
 				- destroy:
 				$( selector ).cbpFWSlider( 'destroy' );
 				*/
-
-				$( '#cbp-fwslider' ).cbpFWSlider();
-
+				
+				var s = $( '#cbp-fwslider' ).cbpFWSlider();
+				
+				
+				
+				
+				
 			} );
 		</script>
        <script>
@@ -188,7 +191,24 @@
 			
 		});	
 	</script>
+<script>
+var itemCount = 0;
+if (itemCount == 0){
+	
+}
+//else if(){}
+else{}
 
+$( ".cbp-fwprev" ).click(function() {
+  alert( "Handler for prev called." );
+  --itemCount;
+});
+
+$( ".cbp-fwnext" ).click(function() {
+  alert( "Handler for next called." );
+  ++itemCount;
+});
+</script>
        
        
        
