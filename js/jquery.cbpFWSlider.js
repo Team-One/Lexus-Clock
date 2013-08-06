@@ -141,7 +141,7 @@
 				$('body').css('background', '#FF6A00');
 			}else if(this.current == 1)
 			{
-				$('body').css('background', '#595C5A)');
+				$('body').css('background', '#595C5A');
 			}else if(this.current == 2)
 			{
 				$('body').css('background', '#000000');
@@ -199,6 +199,17 @@
 			// update old and current values
 			this.old = this.current;
 			this.current = position;
+			if(this.current == 0)
+			{
+				$('body').css('background', '#FF6A00');
+			}else if(this.current == 1)
+			{
+				$('body').css('background', '#595C5A');
+			}else if(this.current == 2)
+			{
+				$('body').css('background', '#000000');
+			}
+
 			// slide
 			this._slide();
 
