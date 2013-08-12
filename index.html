@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/custom_fonts.css" />
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.3.2.js"></script>
 	<script type="text/javascript" src="js/leaflet.js"></script>
 	<script type="text/javascript" src="js/tomtom.map.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -58,7 +59,7 @@
 				<ul>
 				
 				<!-- SLIDE 1 -->
-					<li class="slide one">
+					<li class="slide one" data-role="page">
 						<div class="time-card">
 							<h2 id="lexustime" class="number" ></h2>
 							<p class="minutes">Minutes</p>					
@@ -74,7 +75,8 @@
 					</li>
 				
 				<!-- SLIDE 2 -->
-					<li class="slide two"><div class="time-card">
+					<li class="slide two" data-role="page">
+						<div class="time-card">
 							<h2 id="airporttime" class="number"></h2>
 							<p class="minutes">Minutes</p>					
 						</div>
@@ -89,7 +91,8 @@
 					</li>
 					
 				<!-- SLIDE 3 -->	
-					<li class="slide three"><div class="time-card">
+					<li class="slide three" data-role="page">
+						<div class="time-card">
 							<h2 id="beachtime" class="number"></h2>
 							<p class="minutes">Minutes</p>					
 						</div>
@@ -192,22 +195,24 @@
 		});	
 	</script>
 <script>
-var itemCount = 0;
-if (itemCount == 0){
-	
-}
-//else if(){}
-else{}
 
-$( ".cbp-fwprev" ).click(function() {
-  alert( "Handler for prev called." );
-  --itemCount;
+
+$('li[data-role="page"]').live("swipeleft", function () {
+    var nextpage = $(this).next('li[data-role="page"]');
+    if (nextpage.length > 0) {
+        $.mobile.changePage(nextpage, "slide", false, true);
+    }
+});
+$('li[data-role="page"]').live("swiperight", function () {
+    var prevpage = $(this).prev('li[data-role="page"]');
+    if (prevpage.length > 0) {
+        $.mobile.changePage(prevpage, {
+            transition: "slide",
+            reverse: true
+        }, true, true);
+    }
 });
 
-$( ".cbp-fwnext" ).click(function() {
-  alert( "Handler for next called." );
-  ++itemCount;
-});
 </script>
        
        
