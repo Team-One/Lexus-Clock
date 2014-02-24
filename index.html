@@ -10,14 +10,9 @@
     <meta name="description" content="  ">       <!-- ADD A DESCRIPTION -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    
 	<meta name="apple-mobile-web-app-title" content="AddToHome">
-
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
 <!-- icon links --> 
 	<link rel="apple-touch-icon" href="img/iPhone.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/iPad.png">
@@ -47,9 +42,6 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-
-
 
 <!-- T1 ICON -->
 <!-- SLIDER CONTENT -->
@@ -116,34 +108,12 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script src="js/jquery.cbpFWSlider.js"></script>
-		<script>
-			$( function() {
-				/*
-				- how to call the plugin:
-				$( selector ).cbpFWSlider( [options] );
-				- options:
-				{
-					// default transition speed (ms)
-					speed : 500,
-					// default transition easing
-					easing : 'ease'
-				}
-				- destroy:
-				$( selector ).cbpFWSlider( 'destroy' );
-				*/
-				
-				var s = $( '#cbp-fwslider' ).cbpFWSlider();
-				
-				
-				
-				
-				
-			} );
-		</script>
-       <script>
-		// Here be the seconds and the Tom Tom URL request  
+		<script>$( function() {var s = $( '#cbp-fwslider' ).cbpFWSlider();} );</script>
+       	<script>
+		// Here be the seconds and the Tom Tom URL request for Team One 
+		//(The Reserve:33.9753358,-118.4256124) to 3 locations
 		$.ajax({
-			url:"https://api.tomtom.com/lbs/services/route/3/33.91859,-118.39372:33.85716,-118.30965/Quickest/jsonp?includeTraffic=true&time=now&trafficModelID=-1&includeInstructions=false&key=5zbbuuejq22suvrg4fjrg3fs&jsonp=?&callback=?",
+			url:"https://api.tomtom.com/lbs/services/route/3/33.9753358,-118.4256124:33.85716,-118.30965/Quickest/jsonp?includeTraffic=true&time=now&trafficModelID=-1&includeInstructions=false&key=5zbbuuejq22suvrg4fjrg3fs&jsonp=?&callback=?",
 			dataType:"jsonp",
 			success:function(data){
 				// console.log(data); DEBUGS
@@ -160,7 +130,7 @@
 			
 		});	
 		$.ajax({
-			url:"https://api.tomtom.com/lbs/services/route/3/33.91859,-118.39372:33.942449,-118.407876/Quickest/jsonp?includeTraffic=true&time=now&trafficModelID=-1&includeInstructions=false&key=5zbbuuejq22suvrg4fjrg3fs&jsonp=?&callback=?",
+			url:"https://api.tomtom.com/lbs/services/route/3/33.9753358,-118.4256124:33.942449,-118.407876/Quickest/jsonp?includeTraffic=true&time=now&trafficModelID=-1&includeInstructions=false&key=5zbbuuejq22suvrg4fjrg3fs&jsonp=?&callback=?",
 			dataType:"jsonp",
 			success:function(data){
 				// console.log(data); DEBUGS
@@ -177,7 +147,7 @@
 			
 		});	
 		$.ajax({
-			url:"https://api.tomtom.com/lbs/services/route/3/33.91859,-118.39372:33.917347,-118.429291/Quickest/jsonp?includeTraffic=true&time=now&trafficModelID=-1&includeInstructions=false&key=5zbbuuejq22suvrg4fjrg3fs&jsonp=?&callback=?",
+			url:"https://api.tomtom.com/lbs/services/route/3/33.9753358,-118.4256124:33.917347,-118.429291/Quickest/jsonp?includeTraffic=true&time=now&trafficModelID=-1&includeInstructions=false&key=5zbbuuejq22suvrg4fjrg3fs&jsonp=?&callback=?",
 			dataType:"jsonp",
 			success:function(data){
 				// console.log(data); DEBUGS
